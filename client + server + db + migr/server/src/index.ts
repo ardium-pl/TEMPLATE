@@ -6,6 +6,7 @@ import express from 'express';
 import { connectToDb } from './db';
 import './dotenv-type';
 import { authRouter } from './routers/auth.EXAMPLE';
+import { clientRouter } from './routers/client';
 import { OK_STR } from './utils/console-colors';
 
 const PORT = process.env.PORT ?? 8080;
@@ -20,6 +21,7 @@ app.use(cors({ credentials: true, origin: process.env.APP_URL }));
 
 // Routers
 app.use('/api/auth', authRouter);
+app.use(clientRouter);
 
 // Startup
 console.log(`Starting server...`);
