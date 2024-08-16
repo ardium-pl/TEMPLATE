@@ -1,12 +1,11 @@
 import { Response } from 'express';
-import { isDefined } from 'simple-bool';
 import { _BaseAssert } from './_base-assert';
 import { AssertNumber } from './number';
 import { AssertString } from './string';
 
 export class Assert extends _BaseAssert {
   exists() {
-    if (this.isOk && !isDefined(this.value)) {
+    if (this.isOk && this.value == undefined) {
       this.res.status(400).json({ success: false, error: 'FIELD_REQUIRED', field: this.field });
       this.isOk = false;
     }
@@ -40,7 +39,7 @@ export class Assert extends _BaseAssert {
     return this;
   }
   isObject() {
-    if (this.isOk && (!isDefined(this.value) || typeof this.value != 'object')) {
+    if (this.isOk && (this.value == undefined || typeof this.value != 'object')) {
       this.res
         .status(400)
         .json({ success: false, error: 'TYPE_ERROR', field: this.field, got: this.value, expected: 'object' });
