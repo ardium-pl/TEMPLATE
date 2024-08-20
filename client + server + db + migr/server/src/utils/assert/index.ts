@@ -18,7 +18,7 @@ export class Assert extends _BaseAssert {
         .json({ success: false, error: 'TYPE_ERROR', field: this.field, got: typeof this.value, expected: 'number' });
       this.isOk = false;
     }
-    return new AssertNumber(this.res, this.value, this.field, this.isOk);
+    return new AssertNumber(this.res, this.body, this.field, this.isOk);
   }
   isString() {
     if (this.isOk && typeof this.value != 'string') {
@@ -27,7 +27,17 @@ export class Assert extends _BaseAssert {
         .json({ success: false, error: 'TYPE_ERROR', field: this.field, got: typeof this.value, expected: 'string' });
       this.isOk = false;
     }
-    return new AssertString(this.res, this.value, this.field, this.isOk);
+    return new AssertString(this.res, this.body, this.field, this.isOk);
+  }
+  isStringNumber() {
+    const num = Number(this.value);
+    if (this.isOk && isNaN(num)) {
+      this.res
+        .status(400)
+        .json({ success: false, error: 'TYPE_ERROR', field: this.field, got: typeof this.value, expected: 'string' });
+      this.isOk = false;
+    }
+    return new AssertNumber(this.res, this.body, this.field, this.isOk, true);
   }
   isBoolean() {
     if (this.isOk && typeof this.value != 'boolean') {

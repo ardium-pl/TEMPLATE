@@ -10,8 +10,8 @@ function isPasswordCorrect(reqPassword: string, passwordHash: string): boolean {
 
 export const loginHandler: RequestHandler<null, AuthLoginResponse, AuthLoginRequest> = async (req, res) => {
   // validate all required args exist
-  if (new Assert(res, req.body?.email, 'email').exists().isString().minLength(6).maxLength(256).isFailed) return;
-  if (new Assert(res, req.body?.password, 'password').exists().isString().minLength(8).isFailed) return;
+  if (new Assert(res, req.body, 'email').exists().isString().minLength(6).maxLength(256).isFailed) return;
+  if (new Assert(res, req.body, 'password').exists().isString().minLength(8).isFailed) return;
 
   const { email, password } = req.body;
 
