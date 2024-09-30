@@ -21,14 +21,19 @@ export const queryDb = async <T extends QueryResult = QueryResult>(
   args?: any[]
 ): Promise<{ err: QueryError | null; result: T; fields: FieldPacket[] }> => {
   return new Promise(resolve => {
-    if (args) {
-      connectToDb().query<T>(queryString, args, (err, result, fields) => {
+    const conn = connectToDb();
+    try {
+      if (args) {
+        conn.query<T>(queryString, args, (err, result, fields) => {
+          resolve({ err, result, fields });
+        });
+        return;
+      }
+      conn.query<T>(queryString, (err, result, fields) => {
         resolve({ err, result, fields });
       });
-      return;
+    } finally {
+      conn.end();
     }
-    connectToDb().query<T>(queryString, (err, result, fields) => {
-      resolve({ err, result, fields });
-    });
   });
 };
