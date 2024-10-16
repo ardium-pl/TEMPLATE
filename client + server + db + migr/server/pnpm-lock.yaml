@@ -46,8 +46,8 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1
       pnpm:
-        specifier: ^9.7.1
-        version: 9.7.1
+        specifier: ^9.12.1
+        version: 9.12.1
       sequelize:
         specifier: ^6.37.3
         version: 6.37.3(mysql2@3.11.0)
@@ -740,8 +740,8 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
-  pnpm@9.7.1:
-    resolution: {integrity: sha512-+vNEry1splxMXIwiJOp3qBpeiFnLxOBrFRHdzi8BUVEkMd0Z5q/zHyxqj18qztm9InPh/tfdTeGGiYQFnSxCRw==}
+  pnpm@9.12.1:
+    resolution: {integrity: sha512-5aflKkGDoC1ZMQV/eg2/+dXpzjFh4z+miuOSElt5KCqKikcKUd/IoO2GIhRC6y+1cBmwmQ7ST6tRm/DhvFzPxA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -1728,7 +1728,7 @@ snapshots:
 
   picomatch@2.3.1: {}
 
-  pnpm@9.7.1: {}
+  pnpm@9.12.1: {}
 
   proto-list@1.2.4: {}
 

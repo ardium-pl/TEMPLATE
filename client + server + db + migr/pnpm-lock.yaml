@@ -12,8 +12,8 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1
       pnpm:
-        specifier: ^9.7.1
-        version: 9.7.1
+        specifier: ^9.12.1
+        version: 9.12.1
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -24,8 +24,8 @@ packages:
     resolution: {integrity: sha512-M7CJbmv7UCopc0neRKdzfoGWaVZC+xC1925GitKH9EAqYFzX9//25Q7oX4+jw0tiCCj+t5l6VZh8UPH23NZkMA==}
     hasBin: true
 
-  pnpm@9.7.1:
-    resolution: {integrity: sha512-+vNEry1splxMXIwiJOp3qBpeiFnLxOBrFRHdzi8BUVEkMd0Z5q/zHyxqj18qztm9InPh/tfdTeGGiYQFnSxCRw==}
+  pnpm@9.12.1:
+    resolution: {integrity: sha512-5aflKkGDoC1ZMQV/eg2/+dXpzjFh4z+miuOSElt5KCqKikcKUd/IoO2GIhRC6y+1cBmwmQ7ST6tRm/DhvFzPxA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -44,7 +44,7 @@ snapshots:
     dependencies:
       which-pm-runs: 1.1.0
 
-  pnpm@9.7.1: {}
+  pnpm@9.12.1: {}
 
   prettier@3.3.3: {}
 
