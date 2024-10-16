@@ -30,7 +30,7 @@
       "splitTerminals": [
         {
           "name": "nodemon",
-          "commands": ["npm run server"]
+          "commands": ["cd server", "pnpm dev"]
         }
       ]
     }
