@@ -1,0 +1,2 @@
+# Zaczęcie pracy z przygotowanym kodem
+Zanim zacznie się pracę z przygotowanym kodem należy zainstalować wszystkie wymagane biblioteki (w trzech różnych folderach). Do tego celu przygotowany jest skrypt, który we wwszystkich trzech miejscach je zainstaluje - odpala się go komendą `npm run install-all`.
