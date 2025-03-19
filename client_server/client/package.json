@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "build": "cd ../server && pnpm run build-shared && cd ../client && ng build",
     "test": "ng test",
     "ngg-page": "ng g c --type=page",
     "preinstall": "npx only-allow pnpm"

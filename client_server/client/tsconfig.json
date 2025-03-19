@@ -28,7 +28,8 @@
       "@pipes/*": ["./src/app/pipes/*"],
       "@directives/*": ["./src/app/directives/*"],
       "@guards/*": ["./src/app/guards/*"],
-      "@interceptors/*": ["./src/app/interceptors/*"]
+      "@interceptors/*": ["./src/app/interceptors/*"],
+      "@shared/*": ["./shared-dist/*"],
     }
   },
   "angularCompilerOptions": {

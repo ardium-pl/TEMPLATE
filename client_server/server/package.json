@@ -7,6 +7,8 @@
     "build": "tsc --build",
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/index.ts",
+    "build-shared": "tsc -p ./shared/tsconfig.json",
+    "watch-shared": "tsc -p ./shared/tsconfig.json --watch",
     "migration:create": "npx sequelize-cli migration:create --name",
     "migration:rollback": "env-cmd npx sequelize-cli db:migrate:undo:all --to",
     "migrate": "env-cmd npx sequelize-cli db:migrate",
